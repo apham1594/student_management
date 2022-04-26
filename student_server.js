@@ -17,15 +17,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Student Management Database" });
-});
+// app.get("/", (req, res) => {
+//   res.json({ message: "Student Management Database" });
+// });
 
 
 
 
 // set port, listen for requests
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}.`);
 });
