@@ -1,7 +1,7 @@
 
 const cors = require("cors");
 const express = require("express");
-
+const mysql = require("mysql2");
 const app = express();
 
 var corsOptions = {
@@ -21,7 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 //   res.json({ message: "Student Management Database" });
 // });
 
-
+//create tgeh connection to database
+const connection =mysql.connect.connection({
+    host: "localhost",
+    user: "root",
+    database: student_management
+})
 
 
 // set port, listen for requests
